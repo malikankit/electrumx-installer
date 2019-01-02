@@ -14,10 +14,11 @@ This installs electrumx using the default options:
 
 You can also set some options if you want more control:
 
-| -d --dbdir | Set database directory (default: /db/) |
-|------------|----------------------------------------|
-| --update   | Update previously installed version    |
-| --leveldb  | Use LevelDB instead of RocksDB         |
+| -d --dbdir | Set database directory (default: /db/)               |
+|------------|------------------------------------------------------|
+| --update   | Update previously installed version                  |
+| --abc      | Install Electron-Cash/electrumx (for ABC support)    |
+| --leveldb  | Use LevelDB instead of RocksDB                       |
 
 For example:
 
