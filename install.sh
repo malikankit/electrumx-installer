@@ -54,6 +54,7 @@ Install electrumx.
  --leveldb                     Use LevelDB instead of RocksDB
 --electrumx-git-url url        Install ElectrumX from this URL instead
 --electrumx-git-branch branch  Install specific branch of ElectrumX repository
+--abc						   Install ElectrumX from "https://github.com/Electron-Cash/electrumx" to support Bitcoin ABC
 HELP
 		exit 0
 		;;
@@ -80,6 +81,9 @@ HELP
 		--electrumx-git-branch)
 		ELECTRUMX_GIT_BRANCH="$2"
 		shift
+		;;
+		--abc)
+		ELECTRUMX_GIT_URL="https://github.com/Electron-Cash/electrumx"
 		;;
 	    *)
 	    echo "WARNING: Unknown option $key" >&2
