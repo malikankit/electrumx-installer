@@ -10,17 +10,7 @@ UPDATE_ONLY=0
 UPDATE_PYTHON=0
 VERBOSE=0
 USE_ROCKSDB=1
-#Following ElectrumX supports Bitcoin Core and more (but not Bitcoin ABC)
-#Read https://electrumx.readthedocs.io/en/latest/changelog.html
-#Bitcoin ABC developers have hastily introduced controversial changes that break
-#ElectrumX’s block processing by requiring it to be non-sequential. 
-#Unlike others with unique requirements they refused to make their code coin-specific. 
-# ElectrumX continues to require blocks be naturally ordered, and is compatible with any non-CToR daemon,
-# such as Bitcoin SV, and Bitcoin Unlimited / Bitcoin XT with CToR disabled.
-
 ELECTRUMX_GIT_URL="https://github.com/kyuupichan/electrumx"
-# Following ElectrumX supports Bitcoin ABC. Comment above and uncomment below to switch to ABC
-# ELECTRUMX_GIT_URL="https://github.com/Electron-Cash/electrumx"
 ELECTRUMX_GIT_BRANCH=""
 
 installer=$(realpath $0)
@@ -54,7 +44,7 @@ Install electrumx.
  --leveldb                     Use LevelDB instead of RocksDB
 --electrumx-git-url url        Install ElectrumX from this URL instead
 --electrumx-git-branch branch  Install specific branch of ElectrumX repository
---abc						   Install ElectrumX from "https://github.com/Electron-Cash/electrumx" to support Bitcoin ABC
+--abelian					   Install from HEAD of abelian branch of malikankit/electrumx
 HELP
 		exit 0
 		;;
@@ -83,7 +73,8 @@ HELP
 		shift
 		;;
 		--abc)
-		ELECTRUMX_GIT_URL="https://github.com/Electron-Cash/electrumx"
+		ELECTRUMX_GIT_URL="https://github.com/malikankit/electrumx"
+		ELECTRUMX_GIT_BRANCH="abelian"
 		;;
 	    *)
 	    echo "WARNING: Unknown option $key" >&2

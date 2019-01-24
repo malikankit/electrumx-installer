@@ -17,8 +17,9 @@ You can also set some options if you want more control:
 | -d --dbdir | Set database directory (default: /db/)               |
 |------------|------------------------------------------------------|
 | --update   | Update previously installed version                  |
-| --abc      | Install Electron-Cash/electrumx (for ABC support)    |
+| --abelian      | Install from HEAD of abelian branch of malikankit/electrumx     |
 | --leveldb  | Use LevelDB instead of RocksDB                       |
+
 
 For example:
 
