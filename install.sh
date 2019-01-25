@@ -72,7 +72,7 @@ HELP
 		ELECTRUMX_GIT_BRANCH="$2"
 		shift
 		;;
-		--abc)
+		--abelian)
 		ELECTRUMX_GIT_URL="https://github.com/malikankit/electrumx"
 		ELECTRUMX_GIT_BRANCH="abelian"
 		;;
