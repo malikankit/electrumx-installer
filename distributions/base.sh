@@ -13,8 +13,10 @@ function install_electrumx {
 	rm -rf "/tmp/electrumx/"
 	git clone $ELECTRUMX_GIT_URL /tmp/electrumx
 	cd /tmp/electrumx
+	_info "Installing from source at $ELECTRUMX_GIT_URL"
 	if [ -n "$ELECTRUMX_GIT_BRANCH" ]; then
 		git checkout $ELECTRUMX_GIT_BRANCH
+		_info "Using branch $ELECTRUMX_GIT_BRANCH"
 	else
 		git checkout $(git describe --tags)
 	fi
