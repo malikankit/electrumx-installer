@@ -25,9 +25,10 @@ For example:
 
     wget https://raw.githubusercontent.com/malikankit/electrumx-installer/master/bootstrap.sh -O - | bash -s - -d /media/ssd/electrum-db
 
-For example: (to update existing installation with 'abelian' branch)
-
+For example: to update existing installation with 'abelian' branch
+```
   wget https://raw.githubusercontent.com/malikankit/electrumx-installer/master/bootstrap.sh -O - | bash -s - -d /media/data/electrum-abelian-db --update --abelian
+```
 
 Optional : Might need to ```rm -rf ~/.electrumx-installer/``` if it already exists
 
